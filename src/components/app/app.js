@@ -1,17 +1,20 @@
 import Header from  "../header/header";
-import Nav from "../nav/nav";
+//import Nav from "../nav/nav";
 import Main from "../main/main";
 import Footer from "../footer/footer";
-
+import { Container } from "react-bootstrap";
 
 function App(){
     return(
+        <Container>     
         <div className="app">
+            
+                
             <Header/>
-            <Nav/>
             <Main/>
             <Footer/>
         </div>
+        </Container>
 
     )
 }
