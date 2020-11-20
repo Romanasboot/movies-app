@@ -1,23 +1,16 @@
 import './header.scss'
-import {Row, Col, Button, ButtonGroup} from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {Button, Form, FormControl} from 'react-bootstrap';
 
 function Header(){
     return(
-        <header>
+            <header className=''>
             <div className="row">
-                search
-                
+                <Form inline>
+                    <FormControl type="text" placeholder="Search" className="mr-lg-6" />
+                    <Button variant="outline-primary">Search</Button>
+                </Form>
             </div>
-            <Row>
-                <Col md={{ span: 4, offset: 8 }}>
-                <ButtonGroup className="mr-2">
-                    <Button variant="secondary"><FontAwesomeIcon icon={'fa-bars'}/></Button>
-                    <Button variant="secondary"><FontAwesomeIcon icon={'fa-trash'}/></Button>
-                </ButtonGroup>
-                </Col>
-            </Row>
-        </header>
+            </header>
     )
 }
 export default Header;
