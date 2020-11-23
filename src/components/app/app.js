@@ -1,18 +1,17 @@
-import { Container } from "react-bootstrap";
+//import { Container } from "react-bootstrap";
 import Header from  "../header/header";
 import Main from "../main/main";
 import Footer from "../footer/footer";
 
 function App(){
     return(
-        <Container>     
-        <div className="app">
-                
-            <Header/>
-            <Main/>
-            <Footer/>
-        </div>
-        </Container>
+            <div className="container">
+                <div className="app">
+                    <Header/>
+                    <Main/>
+                    <Footer/>
+                </div>
+            </div>     
 
     )
 }

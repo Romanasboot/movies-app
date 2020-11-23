@@ -19,16 +19,7 @@ const Movies = [
         pavadinimas: "geras postas 4",
         tekstas: "labai daug teksto 4",
     },
-    {
-        id:5,
-        pavadinimas: "geras postas 5",
-        tekstas: "labai daug teksto 5",
-    },
-    {
-        id:6,
-        pavadinimas: "geras postas 6",
-        tekstas: "labai daug teksto 6",
-    }
+    
 
 ]
 export default Movies;

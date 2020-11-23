@@ -1,20 +1,23 @@
-import {Button} from 'react-bootstrap';
 import './main.scss';
 import Movie from '../movie/movie';
 import Movies from '../data/moviesData';
 import { Component } from 'react';
 
 
-class Main extends Component{
+class Main extends Component (){
     constructor()
     {
         super()
         this.state = {
-            count:0
-        }
+            count: 0,
+            moviesData: {}  
     }
- 
-    handleClick = () =>{this.setState(prevState=>{return {count:prevState.count +1}})}
+    this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick = () =>{this.setState(prevState=>{
+        return ({ count: prevState.count + 1 });
+    }) }
     
     render() {
         const movies = Movies.map(movie => <Movie key={movie.id} name={movie.pavadinimas} desc={movie.tekstas} />);
@@ -31,7 +34,7 @@ class Main extends Component{
                         />
                     </div>
                     <hr></hr>
-                    {/* <div className="row">
+                    <div className="row">
 
                         <Movie
                         name="Avatar"
@@ -42,19 +45,15 @@ class Main extends Component{
                         desc="WW2 story"
                         //data={{name:"Takelis2", desc:"\"prota lavinantis filmas\""}}
                         />
-                    </div> */}
+                    </div>
                     <hr></hr>
 
                     <div className="row">
                         {movies}
                     </div>
-                    <div className="row justify-content-center">
-                        <div>
-                        <h2 style= {{textAlign:+"center"}}>{this.state.count}</h2>
-                        </div>
-                        <div>
-                        <Button onClick={this.handleClick}>Click ME</Button>
-                        </div>
+                    <div className="row">
+                        <div><h2 style= {{textAlign:+"center"}}>{this.state.count}</h2></div>
+                        <button onClick={this.handleClick}>Click ME</button>
                     </div>
                 </div>
     );
