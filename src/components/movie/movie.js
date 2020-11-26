@@ -1,6 +1,6 @@
 function Movie(props){
     return (
-        <div className="col-sm-6">
+        <div className="col-sm-4">
             <div className="card">
                 <div className="card-body">
                 <h5 className="card-title">Pavadinimas: {props.name}</h5>
